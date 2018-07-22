@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="{{ asset('themes/jobboard-demo/assets/css/material-kit.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('themes/jobboard-demo/assets/fonts/font-awesome.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('themify-icons/themify-icons.css') }}">
-    <link rel="stylesheet" href="{{ asset('themes/jobboard-demo/assets/css/color-switcher.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('themes/jobboard-demo/assets/extras/animate.css') }}" type="text/css">
+<!--     <link rel="stylesheet" href="{{ asset('themes/jobboard-demo/assets/css/color-switcher.css') }}" type="text/css">
+ -->    <link rel="stylesheet" href="{{ asset('themes/jobboard-demo/assets/extras/animate.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('themes/jobboard-demo/assets/extras/owl.carousel.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('themes/jobboard-demo/assets/extras/owl.theme.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('themes/jobboard-demo/assets/extras/settings.css') }}" type="text/css">
@@ -92,12 +92,14 @@
 </div>
 </div>
 </div>
-   
+
+  <!-- <script src="{{ asset('assets/tinymce/tinymce.min.js')}}"></script>
+  <script>tinymce.init({ selector:'textarea' });</script> -->
     <script type="text/javascript" src="{{ asset('themes/jobboard-demo/assets/js/jquery-min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('themes/jobboard-demo/assets/js/bootstrap.min.js')}}"></script>
     <script type="text/javascript" src="{{ asset('themes/jobboard-demo/assets/js/material.min.js')}}"></script>
     <script type="text/javascript" src="{{ asset('themes/jobboard-demo/assets/js/material-kit.js')}}"></script>
-    <script type="text/javascript" src="{{ asset('themes/jobboard-demo/assets/js/color-switcher.js')}}"></script>
+    <!-- <script type="text/javascript" src="{{ asset('themes/jobboard-demo/assets/js/color-switcher.js')}}"></script> -->
     <script type="text/javascript" src="{{ asset('themes/jobboard-demo/assets/js/jquery.parallax.js')}}"></script>
     <script type="text/javascript" src="{{ asset('themes/jobboard-demo/assets/js/owl.carousel.min.js')}}"></script>
     <script type="text/javascript" src="{{ asset('themes/jobboard-demo/assets/js/jquery.slicknav.js')}}"></script>

@@ -13,7 +13,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Staff....</title>
+    <title>Staff Administrasi</title>
     <link href="{{ asset('Bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Fontfaces CSS-->
@@ -36,7 +36,9 @@
 
     <!-- Main CSS-->
     <link href="{{ asset('assets/admin/css/theme.css') }}" rel="stylesheet" media="all">
-
+    <!-- summernote -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
 </head>
 
 
@@ -63,7 +65,9 @@
 
     </div>
 </div>
-    
+    <!-- <script src="{{ asset('assets/tinymce/tinymce.min.js')}}"></script>
+    <script>tinymce.init({ selector:'textarea' });</script> -->
+   
     <script src="{{ asset('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js') }}"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="{{ asset('Bootstrap/dist/js/bootstrap.min.js') }}"></script>
@@ -90,7 +94,16 @@
 
     <!-- Main JS-->
     <script src="{{ asset('assets/admin/js/main.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+    <!-- summernote -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> 
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#summernote').summernote();
+    });
+  </script>
+    <!-- <script type="text/javascript" src="{{ asset('ckeditor/ckeditor.js') }}"></script> -->
     
 </body>
 

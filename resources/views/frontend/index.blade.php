@@ -57,13 +57,13 @@
           <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 blog-item">
             <div class="blog-item-wrapper">
               <div class="blog-item-img">
-                <a href="single-post.html">
+                
                 <img src="{{ asset('themes/jobboard-demo/assets/img/blog/home-items/img3.jpg')}}" alt="">
                 </a>
               </div>
               <div class="blog-item-text">
                 
-                <a href="#">
+                
                   <h3>
                     Daftar Sebagai Pelamar
                   </h3>
@@ -78,12 +78,12 @@
           <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 blog-item">
             <div class="blog-item-wrapper">
               <div class="blog-item-img">
-                <a href="single-post.html">
+               
                 <img src="{{ asset('themes/jobboard-demo/assets/img/blog/home-items/img1.jpg')}}" alt="">
                 </a>
               </div>
               <div class="blog-item-text">
-                <a href="#">
+                
                   <h3>
                   Kirim Lamaran cepat
                   </h3>
@@ -98,12 +98,12 @@
           <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 blog-item">
             <div class="blog-item-wrapper">
               <div class="blog-item-img">
-                <a href="#">
+                
                 <img src="{{ asset('themes/jobboard-demo/assets/img/features/img-3.jpg')}}" alt="">
                 </a>
               </div>
               <div class="blog-item-text">
-                <a href="#">
+                
                   <h3>
                    Dapat Impian Pekerjaan
                   </h3>
@@ -127,7 +127,7 @@
     <div class="col-md-12">
       <div class="job-list">
         <div class="thumb">
-          <a href="job-details.html"><img src="{{ asset('assets/img/logopers/'. $data->Perusahaan->logo )}}" height="100px" alt=""></a>
+          <a href="{{ url('detail_lowongan',$data->id)}}"><img src="{{ asset('assets/img/logopers/'. $data->Perusahaan->logo )}}" height="100px" alt=""></a>
         </div>
         <div class="job-list-content">
           <h4><a href="#">{{ $data->nama_low }}</a></h4>
@@ -141,20 +141,21 @@
               </div>
             </div>
             <div class="pull-right">
-              <div class="icon">
+              <!-- <div class="icon">
                 <i class="ti-heart"></i>
-              </div>
+              </div> -->
               <a href="{{ url('detail_lowongan',$data->id) }}" class="btn btn-common btn-rm">Terapkan Pekerjaan</a>
             </div>
           </div>
         </div>
       </div>
       @endforeach
-      <div class="col-md-12">
+     <!--  <div class="col-md-12">
         <div class="showing pull-left">
           <a href="#">Lihat <span>6-10</span>  24 Pekerjaan</a>
-        </div>
-        <ul class="pagination pull-right">
+        </div> -->
+
+        <!-- <ul class="pagination pull-right">
           <li class="active"><a href="#" class="btn btn-common"><i class="ti-angle-left"></i> sebelumnya</a></li>
           <li><a href="#">1</a></li>
           <li><a href="#">2</a></li>
@@ -162,9 +163,11 @@
           <li><a href="#">4</a></li>
           <li><a href="#">5</a></li>
           <li class="active"><a href="#" class="btn btn-common">Selanjutnya <i class="ti-angle-right"></i></a></li>
-        </ul>
-      </div>
-    </div>
+        </ul> -->
+
+
+      <!-- </div>
+    </div> -->
   </div>
 </section>
     
@@ -181,7 +184,7 @@
           <div id="clients-scroller">
             @foreach( $perusahaan as $data)
             <div class="items">
-              <img src="{{ asset('assets/img/logopers/'.$data->logo)}}" style="max-height: 180px; max-width: 180px; margin-top: 10px;" alt="">
+              <img src="{{ asset('assets/img/logopers/'.$data->logo)}}" style="max-height: 100; max-width: 180px; margin-top: 10px;" alt="">
             </div>
             @endforeach
           </div>
@@ -189,7 +192,7 @@
       </div>
     </section>
     
-    <section class="infobox section">
+   <!--  <section class="infobox section">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -201,7 +204,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
      <footer>
      
       <div id="copyright">
@@ -209,7 +212,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="site-info text-center">
-                <p>All Rights reserved &copy; 2018 - Designed & Developed by <a rel="nofollow" href="http://graygrids.com">Grayriid</a></p>
+                <p>All Rights reserved &copy;Edit 2018 - Designed & Developed by <a rel="nofollow" href="http://graygrids.com">Saputraririz</a></p>
               </div>
             </div>
           </div>

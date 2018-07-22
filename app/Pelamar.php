@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Pelamar extends Model
 {
 	protected $table = 'pelamars';
-    protected $fillable = ['telepon','pesan','file_cv','user_id','low_id'];
+    protected $fillable = ['telepon','pesan','file_cv','status','user_id','low_id'];
     public $timestamps = true;
 
     public function User(){

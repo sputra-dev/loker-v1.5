@@ -10,7 +10,7 @@
       $check_pers = App\Perusahaan::where('user_id', Auth::user()->id)->count();
       @endphp
       @if($check_pers == 0)
-      <div class="panel-heading"><a href="{{ route('perusahaan.create') }}" class="au-btn au-btn-icon au-btn--green au-btn--small"> <i class="zmdi zmdi-plus"></i> Add</a>
+      <div class="panel-heading"><a href="{{ route('perusahaan.create') }}" class="au-btn au-btn-icon au-btn--green au-btn--small"> <i class="zmdi zmdi-plus"></i> Silahkan Buat Profil Perusahaan Anda</a>
       </div>
       @endif
       <div class="row">
@@ -25,8 +25,8 @@
                   <th>Logo</th>
                   <th>Deskripsi</th>
                   <th>Telepon</th>
-                  <th>Username</th>
-                  <th colspan="2">Action</th>
+                  
+                  <th colspan="2">Opsi</th>
                 </tr>
               </thead>
               <tbody>
@@ -37,11 +37,8 @@
                   <td>{{ $no++ }}</td>
                   <td>{{ $data->nama_pers }}</td>
                   <td><img src="{{ asset('assets/img/logopers/'.$data->logo) }}" style="max-height:70px;max-width:70px;margin-top:7px;" /></td>
-                  <td>{!! str_limit($data->deskripsi, 25) !!}</td>
+                  <td>{!! str_limit($data->deskripsi) !!}</td>
                   <td>{{ $data->telepon }}</td>
-                  <td>
-                    <p>{{ $data->User->name }}</p>
-                  </td>
                   <td>
                     <a class="btn btn-warning" href="{{ route('perusahaan.edit',$data->id) }}"><i class="fas fa-edit"></i>Ubah</a>
                   </td>
@@ -71,7 +68,7 @@
                   <th>Deskripsi</th>
                   <th>Telepon</th>
                   <th>Username</th>
-                  <th colspan="3">Action</th>
+                  <th colspan="3">Opsi</th>
                 </tr>
               </thead>
               <tbody>
@@ -82,7 +79,7 @@
                   <td>{{ $no++ }}</td>
                   <td>{{ $data->nama_pers }}</td>
                   <td><img src="{{ asset('assets/img/logopers/'.$data->logo) }}" style="max-height:70px;max-width:70px;margin-top:7px;" /></td>
-                  <td>{!! str_limit($data->deskripsi, 25) !!}</td>
+                  <td>{!! ($data->deskripsi) !!}</td>
                   <td>{{ $data->telepon }}</td>
                   <td>
                     <p>{{ $data->User->name }}</p>

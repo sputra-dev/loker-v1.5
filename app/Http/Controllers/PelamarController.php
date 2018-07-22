@@ -27,7 +27,7 @@ class PelamarController extends Controller
        ->select('pelamars.*','users.email','lowongans.nama_low')
        ->where('perusahaans.user_id', Auth::user()->id)->get();
        $pel_admin = Pelamar::all();
-        return view('pelamar.index',compact('pel', 'pel_per','pel_admin'));
+        return view('pelamar.index',compact('pel','pel_per','pel_admin'));
     }
 
     /**
@@ -58,6 +58,7 @@ class PelamarController extends Controller
         $pel = new Pelamar;
         $pel->telepon = $request->telepon;
         $pel->pesan = $request->pesan;
+        $pel->status = 0;
         $pel->user_id = Auth::user()->id;
         $pel->low_id = $request->low_id;
 
@@ -123,6 +124,7 @@ class PelamarController extends Controller
         $pel = Pelamar::findOrFail($id);
         $pel->telepon = $request->telepon;
         $pel->pesan= $request->pesan;
+        $pel->status = 0;
         $pel->user_id = Auth::user()->id;
         $pel->low_id = $request->low_id;
         $pel->save();
@@ -166,6 +168,13 @@ class PelamarController extends Controller
         "level"=>"success",
         "message"=>"Data Berhasil dihapus"
         ]);
+        return redirect()->route('pelamar.index');
+    }
+     public function konfirmasi_pelamar($id)
+    {
+        $pel= Pelamar::find($id);
+        $pel->status = 1;
+        $pel->save();
         return redirect()->route('pelamar.index');
     }
 }

@@ -5,7 +5,7 @@
 		<div class="col-md-12">
 			<div class="panel panel-primary">
 			  <div class="panel-heading">View Lowongan  
-			  	<div class="panel-title pull-right"><a href="{{ url()->previous() }}">Back</a>
+			  	<div class="panel-title pull-right"><a href="{{ url()->previous() }}">Kembali</a>
 			  	</div>
 			  </div>
 			  <div class="panel-body">
@@ -31,7 +31,7 @@
 
         			<div class="form-group">
 			  			<label class="control-label">Deskripsi iklan</label>	
-			  			<textarea type="text" name="deskripsi_iklan" class="ckeditor" cols="30" rows="20" readonly>{!! $low->deskripsi_iklan !!}</textarea>
+			  			<areatext type="text" name="deskripsi_iklan" cols="30" rows="20" readonly>{!! $low->deskripsi_iklan !!}</areatext>
 			  		</div>
 
 			  		<div class="form-group">

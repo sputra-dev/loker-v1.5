@@ -5,7 +5,7 @@
 		<div class="col-md-12">
 			<div class="panel panel-active">
 			  <div class="panel-heading">
-			  	<div class="panel-title pull-right"><a href="{{ url()->previous() }}">Back</a>
+			  	<div class="panel-title pull-right"><a href="{{ url()->previous() }}">Kembali</a>
 			  	</div>
 			  </div>
 			  <div class="panel-body">
@@ -61,7 +61,7 @@
 
 			  		<div class="form-group {{ $errors->has('deskripsi_iklan') ? ' has-error' : '' }}">
 			  			<label class="control-label">Deskripsi iklan</label>	
-			  			<textarea type="text" name="deskripsi_iklan" class="ckeditor" required></textarea> 
+			  			<textarea id="summernote"  name="deskripsi_iklan"  ></textarea> 
 			  			@if ($errors->has('deskripsi_iklan'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('deskripsi_iklan') }}</strong>
@@ -98,7 +98,7 @@
 			  		</div>
 			  		
 			  		<div class="form-group">
-			  			<button type="submit" class="btn btn-primary">Create</button>
+			  			<button type="submit" class="btn btn-primary">Buat</button>
 			  		</div>
 			  	</form>
 			  </div>

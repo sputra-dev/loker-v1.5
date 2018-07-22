@@ -9,7 +9,7 @@
                      <div class="header-content pull-left">
                         <h3><a href="#">{{ $lowongan->nama_low }}</a></h3>
                         <p><span>Tanggal mulai: {{ $lowongan->tgl_mulai }}</span></p>
-                        <p>Gaji: <strong class="price">Rp.{{ $lowongan->gaji }}</strong></p>
+                        <p>Gaji: <strong class="price">Rp.{{ number_format($lowongan->gaji) }}</strong></p>
                      </div>
                      <div class="detail-company pull-right text-right">
                         <div class="img-thum">

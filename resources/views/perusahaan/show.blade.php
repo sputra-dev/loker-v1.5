@@ -5,7 +5,7 @@
 		<div class="col-md-12">
 			<div class="panel panel-primary">
 			  <div class="panel-heading">Lihat Perusahaan  
-			  	<div class="panel-title pull-right"><a href="{{ url()->previous() }}">Back</a>
+			  	<div class="panel-title pull-right"><a href="{{ url()->previous() }}">Kembali</a>
 			  	</div>
 			  </div>
 			  <div class="panel-body">
@@ -17,12 +17,12 @@
 			  		<div class="form-group">
 			  			<label class="control-label">Logo</label>
 			  			<br>	
-			  			<img src="{{ asset('assets/img/logopers/'.$per->logo) }}" style="max-height:85px;max-width:80px;margin-top:9px;">
+			  			<img src="{{ asset('assets/img/logopers/'.$per->logo) }}" style="max-height:1000px;max-width:1000px;margin-top:9px;">
 			  		</div>
 
         			<div class="form-group">
 			  			<label class="control-label">Deskripsi</label>	
-			  			<textarea type="text" name="deskripsi" class="ckeditor" cols="30" rows="20" readonly>{!! $per->deskripsi !!}</textarea>
+			  			<areatext type="text" name="deskripsi" >{!! $per->deskripsi !!}</areatext>
 			  		</div>
 
 			  		<div class="form-group">
@@ -31,7 +31,7 @@
 			  		</div>
 
 			  		<div class="form-group">
-			  			<label class="control-label">Userame</label>	
+			  			<label class="control-label">Username</label>	
 			  			<input type="text" name="user_id" class="form-control" value="{{ $per->User->name }}"  readonly>
 			  		</div>
 			  	</div>

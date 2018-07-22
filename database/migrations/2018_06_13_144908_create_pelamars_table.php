@@ -18,6 +18,7 @@ class CreatePelamarsTable extends Migration
             $table->string('telepon');
             $table->text('pesan');
             $table->string('file_cv');
+            $table->string('status');
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedInteger('low_id');

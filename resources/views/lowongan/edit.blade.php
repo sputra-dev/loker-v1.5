@@ -5,10 +5,11 @@
 		<div class="col-md-12">
 			<div class="panel panel-active">
 			  <div class="panel-heading">
-			  	<div class="panel-title pull-right"><a href="{{ url()->previous() }}">Back</a>
+			  	<div class="panel-title pull-right"><a href="{{ url()->previous() }}">Kembali</a>
 			  	</div>
 			  </div>
 			  <div class="panel-body">
+			  	
 			  	<form action="{{ route('lowongan.update',$low->id) }}" method="post" >
 			  		<input name="_method" type="hidden" value="PATCH">
         			{{ csrf_field() }}
@@ -51,9 +52,10 @@
                         @endif
 			  		</div>
 
+			  		
 			  		<div class="form-group {{ $errors->has('deskripsi_iklan') ? ' has-error' : '' }}">
 			  			<label class="control-label">Deskripsi iklan</label>	
-			  			<textarea type="text" name="deskripsi_iklan" value="{{ $low->deskripsi_iklan }}" class="ckeditor" required></textarea> 
+			  			<textarea id="summernote" name="deskripsi_iklan" value="{{ $low->deskripsi_iklan }}" ></textarea> 
 			  			@if ($errors->has('deskripsi_iklan'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('deskripsi_iklan') }}</strong>
@@ -61,6 +63,7 @@
                         @endif
 			  		</div>
 			  		<p>Buat deskripsi min : 30</p>
+
 			  		<div class="form-group {{ $errors->has('pers_id') ? ' has-error' : '' }}">
 			  			<label class="control-label">Perusahaan</label>	
 			  			<select name="pers_id" class="form-control">
@@ -90,7 +93,7 @@
 			  		</div>
 
 			  		<div class="form-group">
-			  			<button type="submit" class="btn btn-primary">Save</button>
+			  			<button type="submit" class="btn btn-primary">Simpan</button>
 			  		</div>
 			  	</form>
 			  </div>
@@ -98,4 +101,5 @@
 		</div>
 	</div>
 </div>
+
 @endsection

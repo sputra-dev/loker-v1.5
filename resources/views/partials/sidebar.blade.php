@@ -2,7 +2,7 @@
 <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="/assets/admin/images/icon/loker2.jpg" alt="Loker Bandung" style="max-height:65px;max-width:150px;margin-top:7px;" />
+                    <img src="/assets/admin/images/icon/logo2.png" alt="KotaLoker" style="max-height:65px;max-width:150px;margin-top:7px;" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
@@ -19,7 +19,7 @@
                         </li>
                         <li>
                             <a href="{{route('perusahaan.index')}}">
-                                <i class="fas fa-circle"></i>Perusahaan</a>
+                                <i class="fas fa-dot-circle-o"></i>Perusahaan</a>
                         </li>
                         <li>
                             <a href="{{route('lowongan.index')}}">
@@ -33,7 +33,7 @@
                         @role('perusahaan')
                         <li>
                             <a href="{{route('perusahaan.index')}}">
-                                <i class="fas fa-circle"></i>Perusahaan</a>
+                                <i class="fas fa-dot-circle-o"></i>Perusahaan</a>
                         </li>
                         
                          <li>
@@ -42,14 +42,14 @@
                             </li>
                             <li>
                             <a href="{{route('pelamar.index')}}">
-                                <i class="fas fa-copy"></i>Lamaran</a>
+                                <i class="fas fa-copy"></i>Lamaran Masuk</a>
                         </li>
                        
                         @endrole
                         @role('pelamar')
                         <li>
                         <a href="{{route('pelamar.index')}}">
-                                <i class="fa fa-floppy-o"></i>Lamaran terkirim</a>
+                                <i class="fa fa-floppy-o"></i>Lamaran Terkirim</a>
                         </li>
                         @endrole
                     </ul>
