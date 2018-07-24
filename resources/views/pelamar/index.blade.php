@@ -119,7 +119,7 @@
                    <form method="get" action="{{ asset('assets/cv/'.$data->file_cv) }}" target="_blank"> <button type="submit"><i class="fa fa-chain"></i>{{ $data->file_cv }}</button></form>
                   </td>
                   @if($data->status == 0)
-                  <td><button class="btn btn-danger btn-disable">Belum Diterims</button></td>
+                  <td><button class="btn btn-danger btn-disable">Belum Diterima</button></td>
                   @endif
                   @if($data->status == 1)
                   <td><button class="btn btn-success btn-disable">Sudah Diterima</button></td>
@@ -159,7 +159,7 @@
         <div class="col-md-12">
           <!-- DATA TABLE-->
           <div class="table-responsive m-b-40">
-            <table class="table table-data2">
+            <table class="table table-hover">
               <thead>
                 <tr>
                   <th>No</th>
@@ -190,7 +190,7 @@
                     <form method="get" action="{{ asset('assets/cv/'.$data->file_cv) }}" target="_blank"> <button type="submit"><i class="fa fa-chain"></i>{{ $data->file_cv }}</button></form>
                   </td>
                    @if($data->status == 0)
-                  <td><button class="btn btn-danger btn-disable">Belum Diterims</button></td>
+                  <td><button class="btn btn-danger btn-disable">Belum Diterima</button></td>
                   @endif
                   @if($data->status == 1)
                   <td><button class="btn btn-success btn-disable">Sudah Diterima</button></td>

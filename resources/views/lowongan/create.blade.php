@@ -25,7 +25,7 @@
 
 
 			  		<div class="form-group {{ $errors->has('tgl_mulai') ? ' has-error' : '' }}">
-			  			<label class="control-label">Tgl mulai</label>	
+			  			<label class="control-label">Tanggal mulai</label>	
 			  			<input type="date" name="tgl_mulai" class="form-control"  required>
 
 			  			@if ($errors->has('tgl_mulai'))
@@ -56,12 +56,9 @@
                             </span>
                         @endif
 			  		</div>
-
-
-
 			  		<div class="form-group {{ $errors->has('deskripsi_iklan') ? ' has-error' : '' }}">
 			  			<label class="control-label">Deskripsi iklan</label>	
-			  			<textarea id="summernote"  name="deskripsi_iklan"  ></textarea> 
+			  			<textarea id="summernote" type="textarea" name="deskripsi_iklan" ></textarea> 
 			  			@if ($errors->has('deskripsi_iklan'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('deskripsi_iklan') }}</strong>

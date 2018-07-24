@@ -5,7 +5,7 @@
 	<div class="container">
 	<div class="col-md-16">
 			<div class="panel panel-success">
-			  <div class="panel-heading"><a href="{{ route('kategori.create') }}" class="au-btn au-btn-icon au-btn--green au-btn--small"> <i class="zmdi zmdi-plus"></i> Add</a>
+			  <div class="panel-heading"><a href="{{ route('kategori.create') }}" class="au-btn au-btn-icon au-btn--green au-btn--small"> <i class="zmdi zmdi-plus"></i> Tambah</a>
 			  	
 			  	</div>
 			  
@@ -13,7 +13,7 @@
      			<div class="col-md-12">
                  <!-- DATA TABLE-->
                    <div class="table-responsive m-b-40">
-					<table class="table table-data2">
+					<table class="table table-striped2">
 				  	<thead>
 			  		<tr>
 			  		  <th>No</th>

@@ -19,6 +19,7 @@ class CreatePerusahaansTable extends Migration
             $table->string('logo');
             $table->text('deskripsi');
             $table->string('telepon');
+            $table->string('alamat');
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

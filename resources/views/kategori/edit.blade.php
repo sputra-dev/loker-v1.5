@@ -5,7 +5,7 @@
 		<div class="col-md-12">
 			<div class="panel panel-active">
 			  <div class="panel-heading">
-			  	<div class="panel-title pull-right"><a href="{{ url()->previous() }}">Back</a>
+			  	<div class="panel-title pull-right"><a href="{{ url()->previous() }}">Kembali</a>
 			  	</div>
 			  </div>
 			  <div class="panel-body">
@@ -24,7 +24,7 @@
 			  		</div>
 
 			  		<div class="form-group">
-			  			<button type="submit" class="btn btn-primary">Save</button>
+			  			<button type="submit" class="btn btn-primary">Simpan</button>
 			  		</div>
 			  	</form>
 			  </div>

@@ -59,16 +59,16 @@
         <div class="col-md-12">
           <!-- DATA TABLE-->
           <div class="table-responsive m-b-40">
-            <table class="table table-data2">
+            <table class="table table-hover">
               <thead>
                 <tr>
-                  <th>No</th>
-                  <th>Nama perusahaan</th>
-                  <th>Logo</th>
-                  <th>Deskripsi</th>
-                  <th>Telepon</th>
-                  <th>Username</th>
-                  <th colspan="3">Opsi</th>
+                  <th class="active">No</th>
+                  <th class="active">Perusahaan</th>
+                  <th class="active">Logo</th>
+                  <th class="active">Deskripsi</th>
+                  <th class="active">Telepon</th>
+                  <th class="active">Username</th>
+                  <th colspan="3" class="active">Opsi</th>
                 </tr>
               </thead>
               <tbody>
@@ -79,7 +79,7 @@
                   <td>{{ $no++ }}</td>
                   <td>{{ $data->nama_pers }}</td>
                   <td><img src="{{ asset('assets/img/logopers/'.$data->logo) }}" style="max-height:70px;max-width:70px;margin-top:7px;" /></td>
-                  <td>{!! ($data->deskripsi) !!}</td>
+                  <td>{!! str_limit($data->deskripsi) !!}</td>
                   <td>{{ $data->telepon }}</td>
                   <td>
                     <p>{{ $data->User->name }}</p>
@@ -91,7 +91,7 @@
                     <form method="post" action="{{ route('perusahaan.destroy',$data->id) }}">
                       <input name="_token" type="hidden" value="{{ csrf_token() }}">
                       <input type="hidden" name="_method" value="DELETE">
-                      <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')"><i class="fas fa-eraser"></i>Hapus</button>
+                      <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')"><i class="fas fa-eraser"></i>Hapus perusahaan</button>
                     </form>
                   </td>
                 </tr>

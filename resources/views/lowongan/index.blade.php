@@ -6,13 +6,13 @@
 	<div class="col-md-16">
 			  <div class="panel panel-success">
 			  @role('perusahaan')			  
-			  <div class="panel-heading"><a href="{{ route('lowongan.create') }}" class="au-btn au-btn-icon au-btn--green au-btn--small"> <i class="zmdi zmdi-plus"></i> Tambah</a>
+			  <div class="panel-heading"><a href="{{ route('lowongan.create') }}" class="au-btn au-btn-icon au-btn--green au-btn--small"> <i class="zmdi zmdi-plus"></i> Tambah kategori</a>
 			  	</div>
 			  <div class="row">
      			<div class="col-md-12">
                  <!-- DATA TABLE-->
                    <div class="table-responsive m-b-40">
-					<table class="table table-striped2">
+					<table class="table table-striped">
 				  	<thead>
 			  		<tr>
 			  		  <th>No</th>
@@ -37,7 +37,7 @@
 				    	<td>{{ $data->tgl_mulai }}</td>
 				    	<td>{{ $data->lokasi }}</td>
 				    	<td>Rp.{{number_format($data->gaji) }}</td>
-				    	<td>{!! str_limit($data->deskripsi_iklan) !!}</td>
+				    	<td>{!! ($data->deskripsi_iklan) !!}</td>
 				    	<td>{{ $data->Perusahaan->nama_pers }}</td>
 				    	<td>{{ $data->Kategori->nama_kategori }}</td>
 				    	@if($data->status == 0)
@@ -106,7 +106,7 @@
 					  <th>Perusahaan</th>
 					  <th>Kategori</th>
 					  <th>Status</th>
-					  <th colspan="3">Action</th>
+					  <th colspan="3">Opsi</th>
 			  		</tr>
 				  	</thead>
 				  	<tbody>
@@ -119,7 +119,7 @@
 				    	<td>{{ $data->tgl_mulai }}</td>
 				    	<td>{{ $data->lokasi }}</td>
 				    	<td>Rp.{{ number_format($data->gaji) }}</td>
-				    	<td>{!! str_limit($data->deskripsi_iklan, 25) !!}</td>
+				    	<td>{!! str_limit($data->deskripsi_iklan) !!}</td>
 				    	<td>{{ $data->Perusahaan->nama_pers }}</td>
 				    	<td>{{ $data->Kategori->nama_kategori }}</td>
 				    	@if($data->status == 0)
