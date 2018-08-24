@@ -24,7 +24,7 @@
 			  		</div>
 
 					<div class="form-group {{ $errors->has('tgl_mulai') ? ' has-error' : '' }}">
-			  			<label class="control-label">Tgl mulai</label>	
+			  			<label class="control-label">Tanggal mulai</label>	
 			  			<input type="date" name="tgl_mulai" value="{{ $low->tgl_mulai }}" class="form-control"  required>
 			  			@if ($errors->has('tgl_mulai'))
                             <span class="help-block">
@@ -32,6 +32,17 @@
                             </span>
                         @endif
 			  		</div>
+
+			  		<div class="form-group {{ $errors->has('tgl_akhir') ? ' has-error' : '' }}">
+			  			<label class="control-label">Tanggal akhir</label>	
+			  			<input type="date" name="tgl_akhir" value="{{ $low->tgl_akhir }}" class="form-control"  required>
+			  			@if ($errors->has('tgl_akhir'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('tgl_akhir') }}</strong>
+                            </span>
+                        @endif
+			  		</div>
+
 			  		<div class="form-group {{ $errors->has('lokasi') ? ' has-error' : '' }}">
 			  			<label class="control-label">Lokasi</label>	
 			  			<input type="text" name="lokasi" value="{{ $low->lokasi }}" class="form-control"  required>

@@ -49,7 +49,15 @@
                             </span>
                         @endif
 			  		</div>
-			  		
+			  		<div class="form-group {{ $errors->has('alamat') ? ' has-error' : '' }}">
+			  			<label class="control-label">Alamat lengkap</label>	
+			  			<textarea class="form-control" rows="5" type="textarea" name="alamat" ></textarea> 
+			  			@if ($errors->has('alamat'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('alamat') }}</strong>
+                            </span>
+                        @endif
+			  		</div>
 			  		<div class="form-group">
 			  			<button type="submit" class="btn btn-primary">Simpan</button>
 			  		</div>

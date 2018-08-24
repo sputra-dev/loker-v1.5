@@ -5,7 +5,7 @@
 	<div class="container">
 	<div class="col-md-16">
 			<div class="panel panel-success">
-			  <div class="panel-heading"><a href="{{ route('kategori.create') }}" class="au-btn au-btn-icon au-btn--green au-btn--small"> <i class="zmdi zmdi-plus"></i> Tambah</a>
+			  <div class="panel-heading"><a href="{{ route('kategori.create') }}" class="au-btn au-btn-icon au-btn--green au-btn--small"> <i class="zmdi zmdi-plus"></i> Tambah kategori</a>
 			  	
 			  	</div>
 			  

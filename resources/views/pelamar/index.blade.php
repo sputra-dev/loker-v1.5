@@ -162,14 +162,14 @@
             <table class="table table-hover">
               <thead>
                 <tr>
-                  <th>No</th>
-                  <th>Telepon</th>
-                  <th>Pesan</th>
-                  <th>Username</th>
-                  <th>Lowongan</th>
-                  <th>FileCV</th>
-                  <th>Status</th>
-                  <th colspan="3">Opsi</th>
+                  <th class="active">No</th>
+                  <th class="active">Telepon</th>
+                  <th class="active">Pesan</th>
+                  <th class="active">Username</th>
+                  <th class="active">Lowongan</th>
+                  <th class="active">FileCV</th>
+                  <th class="active">Status</th>
+                  <th colspan="3" class="active">Opsi</th>
                 </tr>
               </thead>
               <tbody>

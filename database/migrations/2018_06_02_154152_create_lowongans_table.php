@@ -17,6 +17,7 @@ class CreateLowongansTable extends Migration
             $table->increments('id');
             $table->string('nama_low');
             $table->date('tgl_mulai');
+            $table->date('tgl_akhir');
             $table->string('lokasi');
             $table->integer('gaji');
             $table->text('deskripsi_iklan');

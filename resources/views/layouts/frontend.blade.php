@@ -43,23 +43,19 @@
               <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav">
                   <li>
-                    <a class="active" href="http://localhost:8000">
+                    <a class="active" href="{{ url('http://localhost:8000')}}">
                     Beranda
                     </a>
-                    
                   </li>
+                </ul>
                  <!--  <li>
                     <a class="active" href="index.html">
                     Lowongan Kerja
                     </a>
                     
                   </li> -->
-                  <li>
-                    
-                    
-                  
-                  
-                </ul>
+                  <!-- <li> -->
+    
                 <ul class="nav navbar-nav navbar-right float-right">
                   <!-- <li class="left"><a href="post-job.html"><i class="ti-pencil-alt"></i> Pasang Lowongan</a></li> -->
                   <li class="right"><a href="{{ route('login')}}" target="_blank"><i class="ti-lock"></i> Log In</a></li>
@@ -79,20 +75,19 @@
 <i class="ti-arrow-up"></i>
 </a>
 <div id="loading">
-<div id="loading-center">
-<div id="loading-center-absolute">
-<div class="object" id="object_one"></div>
-<div class="object" id="object_two"></div>
-<div class="object" id="object_three"></div>
-<div class="object" id="object_four"></div>
-<div class="object" id="object_five"></div>
-<div class="object" id="object_six"></div>
-<div class="object" id="object_seven"></div>
-<div class="object" id="object_eight"></div>
+  <div id="loading-center">
+    <div id="loading-center-absolute">
+      <div class="object" id="object_one"></div>
+      <div class="object" id="object_two"></div>
+      <div class="object" id="object_three"></div>
+      <div class="object" id="object_four"></div>
+      <div class="object" id="object_five"></div>
+      <div class="object" id="object_six"></div>
+      <div class="object" id="object_seven"></div>
+      <div class="object" id="object_eight"></div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-
   <!-- <script src="{{ asset('assets/tinymce/tinymce.min.js')}}"></script>
   <script>tinymce.init({ selector:'textarea' });</script> -->
     <script type="text/javascript" src="{{ asset('themes/jobboard-demo/assets/js/jquery-min.js') }}"></script>

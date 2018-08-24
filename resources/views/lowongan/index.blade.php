@@ -4,9 +4,9 @@
 	<div class="row">
 	<div class="container">
 	<div class="col-md-16">
-			  <div class="panel panel-success">
+			  <div class="panel panel-danger">
 			  @role('perusahaan')			  
-			  <div class="panel-heading"><a href="{{ route('lowongan.create') }}" class="au-btn au-btn-icon au-btn--green au-btn--small"> <i class="zmdi zmdi-plus"></i> Tambah kategori</a>
+			  <div class="panel-heading"><a href="{{ route('lowongan.create') }}" class="au-btn au-btn-icon au-btn--green au-btn--small"> <i class="zmdi zmdi-plus"></i> TAMBAH LOWONGAN perusahaan anda</a>
 			  	</div>
 			  <div class="row">
      			<div class="col-md-12">
@@ -18,10 +18,11 @@
 			  		  <th>No</th>
 					  <th>Nama Lowongan</th>
 					  <th>Tanggal Mulai</th>
+					  <th>Tanggal akhir</th>
 					  <th>Lokasi</th>
 					  <th>Gaji</th>
-					  <th>Deskripsi Iklan</th>
-					  <th>Perusahaan</th>
+					  
+					  
 					  <th>Kategori</th>
 					  <th>Status</th>
 					  <th colspan="3">Opsi</th>
@@ -35,10 +36,11 @@
 				    	<td>{{ $no++ }}</td>
 				    	<td>{{ $data->nama_low }}</td>
 				    	<td>{{ $data->tgl_mulai }}</td>
+				    	<td>{{ $data->tgl_akhir }}</td>
 				    	<td>{{ $data->lokasi }}</td>
 				    	<td>Rp.{{number_format($data->gaji) }}</td>
-				    	<td>{!! ($data->deskripsi_iklan) !!}</td>
-				    	<td>{{ $data->Perusahaan->nama_pers }}</td>
+				    	
+				    	
 				    	<td>{{ $data->Kategori->nama_kategori }}</td>
 				    	@if($data->status == 0)
 				    	<td><button class="btn btn-danger btn-disable">Belum DiKonfirmasi</button></td>
@@ -77,7 +79,7 @@
 								<input name="_token" type="hidden" value="{{ csrf_token() }}">
 								<input type="hidden" name="_method" value="DELETE">
 
-								<button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')"><i class="fas fa-eraser"></i>Hapus</button>
+								<button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')"><i class="fas fa-eraser"></i>Hapus Iklan</button>
 							</form>
 						</td>
 						@endrole
@@ -94,19 +96,20 @@
      			<div class="col-md-12">
                  <!-- DATA TABLE-->
                    <div class="table-responsive m-b-40">
-					<table class="table table-data2">
+					<table class="table table-hover">
 				  	<thead>
 			  		<tr>
-			  		  <th>No</th>
-					  <th>Nama Lowongan</th>
-					  <th>Tanggal Mulai</th>
-					  <th>Lokasi</th>
-					  <th>Gaji</th>
-					  <th>Deskripsi Iklan</th>
-					  <th>Perusahaan</th>
-					  <th>Kategori</th>
-					  <th>Status</th>
-					  <th colspan="3">Opsi</th>
+			  		  <th class="active">No</th>
+					  <th class="active">Nama Lowongan</th>
+					  <th class="active">Tanggal Mulai</th>
+					  <th class="active">Tanggal akhir</th>
+					  <th class="active">Lokasi</th>
+					  <th class="active">Gaji</th>
+					  <th class="active">Deskripsi Iklan</th>
+					  <th class="active">Perusahaan</th>
+					  <th class="active">Kategori</th>
+					  <th class="active">Status</th>
+					  <th colspan="3" class="active">Opsi</th>
 			  		</tr>
 				  	</thead>
 				  	<tbody>
@@ -117,6 +120,7 @@
 				    	<td>{{ $no++ }}</td>
 				    	<td>{{ $data->nama_low }}</td>
 				    	<td>{{ $data->tgl_mulai }}</td>
+				    	<td>{{ $data->tgl_akhir }}</td>
 				    	<td>{{ $data->lokasi }}</td>
 				    	<td>Rp.{{ number_format($data->gaji) }}</td>
 				    	<td>{!! str_limit($data->deskripsi_iklan) !!}</td>

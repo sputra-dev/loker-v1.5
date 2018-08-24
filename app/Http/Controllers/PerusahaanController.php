@@ -46,13 +46,15 @@ class PerusahaanController extends Controller
             'nama_pers' => 'required|max:25',
             'logo' => 'required|',
             'deskripsi' => 'required|min:50',
-            'telepon' => 'required|max:13|unique:perusahaans'
+            'telepon' => 'required|max:13|unique:perusahaans',
+            'alamat' => 'required'
         ]);
         $per = new Perusahaan;
         $per->nama_pers = $request->nama_pers;
         $per->logo = $request->logo;
         $per->deskripsi = $request->deskripsi;
         $per->telepon = $request->telepon;
+        $per->alamat = $request->alamat;
         $per->user_id = Auth::user()->id;    
         $per->save();
         Session::flash("flash_notification", [
@@ -111,13 +113,15 @@ class PerusahaanController extends Controller
             'nama_pers' => 'required|max:25',
             'logo' => 'required|',
             'deskripsi' => 'required|min:50',
-            'telepon' => 'required|max:13'
+            'telepon' => 'required|max:13',
+            'alamat' => 'required|max:13'
         ]);
         $per = Perusahaan::findOrFail($id);
         $per->nama_pers = $request->nama_pers;
         $per->logo = $request->logo;
         $per->deskripsi = $request->deskripsi;
         $per->telepon = $request->telepon;
+        $per->alamat = $request->alamat;
         $per->user_id = Auth::user()->id;
         $per->save();
         Session::flash("flash_notification", [

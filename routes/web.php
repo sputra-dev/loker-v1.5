@@ -40,4 +40,3 @@ Route::get('/detail_lowongan/{id}', 'FrontendController@detail_lowongan');
 Route::get('/konfirmasilowongan/{id}', 'LowonganController@konfirmasi_lowongan');
 Route::get('/konfirmasipelamar/{id}', 'PelamarController@konfirmasi_pelamar');
 Route::post('/carilowongan', 'FrontendController@cari_lowongan');
-

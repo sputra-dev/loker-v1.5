@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
-@section('content')
 
+@section('content')
 <section class="job-detail section">
          <div class="container">
             <div class="row">
@@ -9,7 +9,8 @@
                      <div class="header-content pull-left">
                         <h3><a href="#">{{ $lowongan->nama_low }}</a></h3>
                         <p><span>Tanggal mulai: {{ $lowongan->tgl_mulai }}</span></p>
-                        <p>Gaji: <strong class="price">Rp.{{ number_format($lowongan->gaji) }}</strong></p>
+                         <p><span>Tanggal akhir   : {{ $lowongan->tgl_akhir }}</span></p>
+                        <p>Gaji   : <strong class="price">Rp.{{ number_format($lowongan->gaji) }}</strong></p>
                      </div>
                      <div class="detail-company pull-right text-right">
                         <div class="img-thum">
@@ -17,13 +18,11 @@
                         </div>
                         <div class="name">
                            <h4>{{ $lowongan->Perusahaan->nama_pers }}</h4>
-                           <h5>{{ $lowongan->lokasi }} </h5>
+                           <h5>{{ $lowongan->Perusahaan->alamat }} </h5>
                         </div>
                      </div>
                      <div class="clearfix">
-                        <div class="meta">
-                           
-                        </div>
+                      
                      </div>
                   </div>
                </div>
@@ -31,7 +30,9 @@
                   <div class="content-area">
                      <div class="clearfix">
                         <div class="box">
-                           <h4>Deskripsi lowongan</h4>
+                            <h4>Deskripsi Perusahaan</h4>
+                         <p>{!! $lowongan->Perusahaan->deskripsi !!}</p>
+                           <h4>Deskripsi Pekerjaan</h4>
                            <p>{!! $lowongan->deskripsi_iklan !!}</p>
                            @guest
                            <a href="#" class="btn btn-common" data-toggle="modal" data-target="#lamaran">Kirim Lamaran</a>

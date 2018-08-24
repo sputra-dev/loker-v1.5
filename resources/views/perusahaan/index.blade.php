@@ -20,13 +20,13 @@
             <table class="table table-data2">
               <thead>
                 <tr>
-                  <th>No</th>
-                  <th>Nama perusahaan</th>
-                  <th>Logo</th>
-                  <th>Deskripsi</th>
-                  <th>Telepon</th>
                   
-                  <th colspan="2">Opsi</th>
+                  <th class="danger">Perusahaan</th>
+                  <th class="danger">Logo</th>
+                  <th class="danger">Deskripsi</th>
+                  <th class="danger">Telepon</th>
+                  <th class="danger">Alamat</th>
+                  <th class="danger" colspan="2">Opsi</th>
                 </tr>
               </thead>
               <tbody>
@@ -34,11 +34,12 @@
                 @php $no = 1; @endphp
                 @foreach($per as $data)
                 <tr>
-                  <td>{{ $no++ }}</td>
+                 
                   <td>{{ $data->nama_pers }}</td>
                   <td><img src="{{ asset('assets/img/logopers/'.$data->logo) }}" style="max-height:70px;max-width:70px;margin-top:7px;" /></td>
                   <td>{!! str_limit($data->deskripsi) !!}</td>
                   <td>{{ $data->telepon }}</td>
+                  <td>{{ $data->alamat }}</td>
                   <td>
                     <a class="btn btn-warning" href="{{ route('perusahaan.edit',$data->id) }}"><i class="fas fa-edit"></i>Ubah</a>
                   </td>
@@ -67,6 +68,7 @@
                   <th class="active">Logo</th>
                   <th class="active">Deskripsi</th>
                   <th class="active">Telepon</th>
+                  <th class="active">Alamat</th>
                   <th class="active">Username</th>
                   <th colspan="3" class="active">Opsi</th>
                 </tr>
@@ -81,6 +83,7 @@
                   <td><img src="{{ asset('assets/img/logopers/'.$data->logo) }}" style="max-height:70px;max-width:70px;margin-top:7px;" /></td>
                   <td>{!! str_limit($data->deskripsi) !!}</td>
                   <td>{{ $data->telepon }}</td>
+                  <td>{{ $data->alamat }}</td>
                   <td>
                     <p>{{ $data->User->name }}</p>
                   </td>

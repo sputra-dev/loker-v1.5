@@ -35,6 +35,17 @@
                         @endif
 			  		</div>
 
+			  		<div class="form-group {{ $errors->has('tgl_akhir') ? ' has-error' : '' }}">
+			  			<label class="control-label">Tanggal akhir</label>	
+			  			<input type="date" name="tgl_akhir" class="form-control"  required>
+
+			  			@if ($errors->has('tgl_akhir'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('tgl_akhir') }}</strong>
+                            </span>
+                        @endif
+			  		</div>
+
 
 			  		<div class="form-group {{ $errors->has('lokasi') ? ' has-error' : '' }}">
 			  			<label class="control-label">Lokasi</label>	

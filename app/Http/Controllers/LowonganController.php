@@ -46,6 +46,7 @@ class LowonganController extends Controller
          $this->validate($request,[
             'nama_low' => 'required|max:25',
             'tgl_mulai' => 'required|',
+            'tgl_akhir' => 'required|',
             'lokasi' => 'required|',
             'gaji' => 'required|',
             'deskripsi_iklan' => 'required|min:30',
@@ -55,6 +56,7 @@ class LowonganController extends Controller
         $low = new Lowongan;
         $low->nama_low = $request->nama_low;
         $low->tgl_mulai = $request->tgl_mulai;
+        $low->tgl_akhir = $request->tgl_akhir;        
         $low->lokasi = $request->lokasi;
         $low->gaji = $request->gaji;
         $low->deskripsi_iklan = $request->deskripsi_iklan;
@@ -111,6 +113,7 @@ class LowonganController extends Controller
         $this->validate($request,[
             'nama_low' => 'required|max:25',
             'tgl_mulai' => 'required|',
+            'tgl_akhir' => 'required|',
             'lokasi' => 'required|',
             'gaji' => 'required|',
             'deskripsi_iklan' => 'required|min:30',
@@ -120,6 +123,7 @@ class LowonganController extends Controller
         $low = Lowongan::findOrFail($id);
         $low->nama_low = $request->nama_low;
         $low->tgl_mulai = $request->tgl_mulai;
+        $low->tgl_akhir = $request->tgl_akhir;
         $low->lokasi = $request->lokasi;
         $low->gaji = $request->gaji;
         $low->deskripsi_iklan = $request->deskripsi_iklan;

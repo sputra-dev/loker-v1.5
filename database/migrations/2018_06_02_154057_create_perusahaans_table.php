@@ -16,10 +16,10 @@ class CreatePerusahaansTable extends Migration
         Schema::create('perusahaans', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama_pers');
-            $table->string('logo');
+            $table->string('logo')->nullable();
             $table->text('deskripsi');
             $table->string('telepon');
-            $table->string('alamat');
+            $table->text('alamat');
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
